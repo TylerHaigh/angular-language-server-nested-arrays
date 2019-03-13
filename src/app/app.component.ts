@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-dream-app';
+
+  accessions: Accession[] = [
+    { testSet: [ { isCritical: false } ]},
+    { testSet: [ { isCritical: true } ]}
+  ]
+}
+
+
+
+class Accession {
+  testSet: AccessionTestSet[] = []
+}
+
+class AccessionTestSet {
+  isCritical: boolean
 }
